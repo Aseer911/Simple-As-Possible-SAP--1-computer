@@ -1,10 +1,10 @@
 ## Simple-As-Possible-SAP-1-computer.
 SAP-1 Architecture-based 8-bit Computer Design and Implementation: The Simple As Possible (SAP)-1 computer is a very basic model of a microprocessor consisting of discrete modules. Among the modules that comprise this system are an output unit, a memory unit, an ALU, a clock generator, and an instruction register which has 16 instructions in total.
 
-#Circuit
+**Circuit**
 ![image](https://github.com/Aseer911/Simple-As-Possible-SAP--1-computer/assets/58761121/5b8f6748-dc34-43f0-96e7-9d9b05553156)
 
-#Features
+**Features**
 1. Has various modules like clock pulse generator, program counter, input unit, memory address register (MAR), accumulator, B-register, output register, RAM (16x8 bit), arithmetic and logic unit (ALU),     instruction register, controller/sequencer, binary display, and additional modules like C register, D register, and sign display.
 2. Can perform basic operations like loading data (LDA), addition (ADD), subtraction (SUB), and output (OUT) through corresponding instructions.
 3. Has a 5 T-state cycle for executing instructions.
@@ -15,7 +15,11 @@ SAP-1 Architecture-based 8-bit Computer Design and Implementation: The Simple As
 8. The controller/sequencer generates necessary microinstructions based on the macroinstruction and T-state.
 9. Has a binary-to-BCD converter to display the output in binary-coded decimal form.
 
-#T-States
+**Block Diagram**
+![image](https://github.com/Aseer911/Simple-As-Possible-SAP--1-computer/assets/58761121/cda31563-35fe-4333-ba36-02052043afa0)
+
+
+**T-States**
 The SAP-1 computer executes instructions in a sequence of 5 T-states (T1 to T5):
 T1: The instruction is fetched from memory (RAM) into the instruction register by enabling the RO (RAM Output) and II (Instruction Register Load) microinstructions.
 T2: The program counter is incremented by enabling the CE (Counter Enable) microinstruction to fetch the next instruction.
@@ -31,7 +35,7 @@ ADD: EO, AI, CI (Adds data in ALU, stores result in AC and C register)
 SUB: EO, AI (Subtracts, stores result in AC)
 The SJ (Skip Jump) microinstruction is used to skip unnecessary T-states for certain instructions like LDA and OUT.
 
-#Microinstructions
+**Microinstructions**
 1. CO - Sends value from program counter to bus
 2. CE - Enables program counter to increment
 3. MI - Allows MAR to load data from bus
